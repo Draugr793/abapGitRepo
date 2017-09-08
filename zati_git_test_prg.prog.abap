@@ -33,8 +33,8 @@ START-OF-SELECTION.
   DATA: lt_flights TYPE STANDARD TABLE OF sflight.
 
 
-  SELECT *
-  INTO TABLE lt_flights
+  SELECT carrid connid
+  INTO CORRESPONDING FIELDS OF TABLE lt_flights
   FROM sflight
   WHERE carrid IN s_carrid
     AND currency EQ 'USD'.
