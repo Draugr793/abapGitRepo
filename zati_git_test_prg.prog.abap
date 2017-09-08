@@ -37,4 +37,4 @@ START-OF-SELECTION.
   INTO TABLE lt_flights
   FROM sflight
   WHERE carrid IN s_carrid
-    AND currency EQ 'EUR'.
+    AND currency EQ 'USD'.
