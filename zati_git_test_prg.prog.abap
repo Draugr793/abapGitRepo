@@ -39,4 +39,4 @@ START-OF-SELECTION.
   FROM sflight
   WHERE carrid IN s_carrid
     AND connid IN s_connid
-    AND currency EQ 'USD'.
+    AND currency EQ 'EUR'.
