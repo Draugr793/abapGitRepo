@@ -22,7 +22,8 @@ TABLES: sflight.
 * Selection-Screen
 *----------------------------------------------------------------------*
 
-SELECT-OPTIONS: s_carrid FOR sflight-carrid.
+SELECT-OPTIONS: s_carrid FOR sflight-carrid,
+                s_connid FOR sflight-connid.
 
 *----------------------------------------------------------------------*
 * Events
@@ -37,4 +38,5 @@ START-OF-SELECTION.
   INTO CORRESPONDING FIELDS OF TABLE lt_flights
   FROM sflight
   WHERE carrid IN s_carrid
-    AND currency EQ 'USD'.
+    AND connid IN s_connid
+    AND currency EQ 'EUR'.
